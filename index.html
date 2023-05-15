@@ -9,6 +9,50 @@
     <title>IMC calculator</title>
 </head>
 <body>
-    
+    <div class="calculator">
+        <h1>Calcul de votre IMC</h1>
+        <div class="form">
+            <form>
+                <label for="height">Taille (en cm)</label>
+                <input type="text" id="height" placeholder="exemple : 175">
+                <label for="weight">Poids (en kg)</label>
+                <input type="text" id="weight" placeholder="exemple : 75">
+            </form>
+            <input type="submit" class="btn">
+        </div>
+        <div class="table-imc">
+            <h2>Interprétation de l'indice de masse corporelle (IMC)</h2>
+            <table>
+                <tr>
+                    <td>Inférieur à 16</td>
+                    <td>Aneroxie ou dénutrition</td>
+                </tr>
+                <tr>
+                    <td>Entre 16.5 et 18.5</td>
+                    <td>Maigreur</td>
+                </tr>
+                <tr>
+                    <td>Entre 18.5 et 25</td>
+                    <td>Corpulence normale</td>
+                </tr>
+                <tr>
+                    <td>Entre 25 et 30</td>
+                    <td>Surpoids</td>
+                </tr>
+                <tr>
+                    <td>Entre 30 et35 </td>
+                    <td>Obésité modérée</td>
+                </tr>
+                <tr>
+                    <td>Entre 35 et 40</td>
+                    <td>Obésité élevé</td>
+                </tr>
+                <tr>
+                    <td>Supérieur à 40</td>
+                    <td>Obésité morbide ou massive</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

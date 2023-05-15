@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    $main-color: #ffe500;
+    $font-color: #fafafa;
+    $accent-color: #572ccc;
+
+
+}
