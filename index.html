@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculez votre IMC">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="/assets/js/main.js" defer></script>
     <title>IMC calculator</title>
 </head>
 <body>
-    <div class="calculator">
-        <h1>Calcul de votre IMC</h1>
-        <p>IMC = poids (kg)/(Taille(m)2)</p>
-        <div class="form">
-            <form>
-                <label for="height">Taille (en cm)</label>
-                <input type="text" id="height" placeholder="exemple : 175">
-                <label for="weight">Poids (en kg)</label>
-                <input type="text" id="weight" placeholder="exemple : 75">
-            </form>
-            <input type="submit" class="btn">
-        </div>
+    <div class="container">
+        <div class="title">
+           <h1>Calcul de votre IMC</h1>
+            <p>IMC = poids (kg)/(Taille(m)2)</p> 
+        </div>     
+        <form class="formulaire">
+            <div class="mb">
+                <label for="height" >Taille (en cm)</label>
+                <input type="text" id="height" placeholder="exemple : 175" required autofocus> 
+            </div>
+            <div class="mb">
+                <label for="weight" >Poids (en kg)</label>
+                <input type="text" id="weight" placeholder="exemple : 75" required> 
+            </div>
+            
+            <input type="submit" class="btn" value="calculer" id="submit">
+        </form>
         <div class="table-imc">
-            <h2>Interprétation de l'indice de masse corporelle (IMC)</h2>
+            <caption>Interprétation de l'indice de masse corporelle (IMC)</caption>
             <table>
                 <tr>
                     <td>Inférieur à 16</td>
