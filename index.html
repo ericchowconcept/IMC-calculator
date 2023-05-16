@@ -15,14 +15,14 @@
            <h1>Calcul de votre IMC</h1>
             <p>IMC = poids (kg)/(Taille(m)2)</p> 
         </div>     
-        <form class="formulaire">
+        <form class="formulaire" name="imcForm">
             <div class="mb">
                 <label for="height" >Taille (en cm)</label>
-                <input type="text" id="height" placeholder="exemple : 175" required autofocus> 
+                <input type="text" id="height"  name="height" placeholder="exemple : 175" required autofocus> 
             </div>
             <div class="mb">
                 <label for="weight" >Poids (en kg)</label>
-                <input type="text" id="weight" placeholder="exemple : 75" required> 
+                <input type="text" id="weight" name="size" placeholder="exemple : 75" required> 
             </div>
             
             <input type="submit" class="btn" value="calculer" id="submit">
