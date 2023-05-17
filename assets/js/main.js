@@ -1,26 +1,58 @@
 
-const poids = document.querySelector('#weight').value;
-const taille = document.querySelector('#height').value;
 
 
 
-const form = document.querySelector('.formulaire')
 
-form.addEventListener('submit', function(e){
-    e.preventDefault()
-   
-})
+const formImc = document.forms.imcForm;
 
-function displayResult(taille, poids){
-   
-    let mutiply = taille*2;
+formImc.addEventListener("submit", function(event){
+    // ajout de if condition une fois le math est fait
+    event.preventDefault();
+
+    const height = formImc.height.value;
+    const weight = formImc.weight.value;
+
     
-}
+   const isValid = isValidForm();
+   if (isValid){
+    const result = calculateImc(height,weight);
+    
+    createElement(result.toFixed(2));
+   }else if(){
+    
+   }
+
+    
+} )
+
+ function isValidForm(){
+
+    let result = true;
+    return result;
+ }
+
+ function calculateImc(height,weight){
+        const calcul = weight/Math.pow(height/100, 2);
+        return calcul;
+    }
+
+ function createElement(x){
+    const message = document.createElement('div');
+    message.textContent = `Votre IMC est de ${x}`;
+    message.classList.add('message');
+    formImc.insertAdjacentElement('afterend', message)
+
+    formImc.reset();
+ }   
 
 
-// console.log(mutiply);
-const forms = document.forms.imcForm
-console.log(forms.height.value);
+
+
+
+
+
+
+
 // *correction Rachid
 
 // const formImc = document.forms.imcForm;
@@ -30,12 +62,13 @@ console.log(forms.height.value);
 
 //     const weight = formImc.weight.value;
 //     const size = formImc.size.value;
-const isGood = isValidForm(weight, size)
-if(isGood){
+
+// const isGood = isValidForm(weight, size)
+// if(isGood){
     //     const result = calculateImc(weight,size)
     //     createElement(result.toFixed(2))
 
-}
+// }
 
     
 // });    
@@ -50,6 +83,7 @@ if(isGood){
 //     messageResult.textContent = `Votre IMC est de ${imc}`
 //     messageResult.classList.add('result')
 //     formImc.insertAdjacentElement('afterend', messageResult)
+
 //     formImc.weight.value = ""
 //     formImc.size.value = ""
 // }
